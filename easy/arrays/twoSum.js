@@ -25,6 +25,14 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-
-
-};
+  
+  // If the map has a key where target - current value is present
+  if (numMap.has(target - nums[i])) {
+    // return the indexes
+    return [i, numMap.get(target - nums[i])]
+  }
+  // add the value to the map
+  if(!numMap.has(nums[i])) {
+    numMap.set(nums[i], i)
+  }
+} 
